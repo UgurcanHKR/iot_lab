@@ -35,16 +35,36 @@ var firebase = require('firebase');
 var thingy_id;
 
 var firebase_login = {
-    email : <Email>,
-    pass : <Password>
+    email : "iotgroup@gmail.com",
+    pass : "iotgroup"
 };
+/*var firebase_login = {
+    email : "iotgroup1@gmail.com",
+    pass : "iotgroup1"
+};
+var firebase_config = {
+  apiKey: "AIzaSyC35Pbu3NXZ26ma3ZUnftl7_SzectjZj_c",
+  authDomain: "iot-group-db.firebaseapp.com",
+  databaseURL: "https://iot-group-db-default-rtdb.firebaseio.com",
+  storageBucket: "iot-group-db.appspot.com",
+  projectId: "iot-group-db",
+};*/
 
 var firebase_config = {
-  apiKey: <API KEY>,
-  authDomain: "<ID>.firebaseapp.com",
-  databaseURL: "https://<ID>.firebaseio.com",
-  storageBucket: "<ID>.appspot.com",
-};
+    apiKey: "AIzaSyDmBJgRYUJtQC3oCY3G9Q36Nycsxp3keWg",
+    authDomain: "my-firebase-db-1e407-default-rtdb.firebaseapp.com",
+    databaseURL: "https://my-firebase-db-1e407-default-rtdb.europe-west1.firebasedatabase.app",
+    storageBucket: "my-firebase-db-1e407-default-rtdb.appspot.com",
+    
+  };
+  //projectId: "my-firebase-db-1e407",
+// databaseURL: "https://my-firebase-db-1e407.firebaseio.com",
+//databaseURL: "https://iot-group-db-default-rtdb.europe-west1.firebasedatabase.app"
+//databaseURL: "https://iot-group-db-default-rtdb.firebaseio.com",
+//databaseURL: "https://iot-group-db.firebaseio.com",
+//databaseURL: "https://my-firebase-db-1e407.firebaseio.com",
+//databaseURL: "https://my-firebase-db-1e407.europe-west1.firebasedatabase.app",
+// databaseURL: "https://my-firebase-db-1e407-default-rtdb.firebaseio.com",
 
 var database;
 var this_thingy;
@@ -69,11 +89,22 @@ process.on('SIGINT', function () {
     });
 });
 
+/*function firebaseWriteGasData(gas, temperature) {
+    var date  = new Date()
+    var ISOString = date.toISOString();
+    var timestamp = ISOString.split('T')[0] + '/' + ISOString.split('T')[1].split('Z')[0].replace('.', '_');
+    console.log(timestamp); 
+    set(ref(firebase.database(), 'thingy/' + thingy_id + '/' + timestamp),{
+        eco2: gas.eco2,
+        tvoc: gas.tvoc,
+        temp: temperature
+    });
+}*/
 function firebaseWriteGasData(gas, temperature) {
     var date  = new Date()
     var ISOString = date.toISOString();
     var timestamp = ISOString.split('T')[0] + '/' + ISOString.split('T')[1].split('Z')[0].replace('.', '_');
-    console.log(timestamp);
+    console.log(timestamp); 
     firebase.database().ref('thingy/' + thingy_id + '/' + timestamp).set({
         eco2: gas.eco2,
         tvoc: gas.tvoc,
@@ -88,6 +119,7 @@ function onGasSensorData(gas) {
 
 function onTemperatureData(temperature) {
     current_temp = temperature;
+    console.log(current_temp)
 }
 
 function connectAndEnableGas(thingy) {

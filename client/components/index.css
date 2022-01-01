@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+@media only screen and (max-width: 360px) {
+  html{
+    height: 360px;
+  }
+
+  body {
+    background-color: #3d3f44;
+    height: 360px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  }
+
+  .mybuttonOn{
+    background-color: #04AA6D;
+    color: #eaeaea;
+    padding: 0px 10%;
+    font-size: 32px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-width: 0px;
+    border: solid #04AA6D;
+  }
+
+  .mybuttonOff{
+    background-color: transparent;
+    color: #04AA6D;
+    padding: 0px 10%;
+    font-size: 32px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-width: 0px;
+    border: solid #04AA6D;
+  }
+
+  button{
+    cursor: pointer;
+  }
+
+  .myRadioButton{
+    margin-right: 5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+  }
+
+  .radioGroup{
+    width: 100%;    
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+  }
+
+  #main{
+    height: 360px;
+    width: 360px;
+    color: #eaeaea;
+    text-align: center;
+  }
+
+  #title{
+    font-weight: bold;
+    font-size: 40px;
+    width: 100%;
+    height: 10%;
+  }
+
+  #radiobuttons{
+    padding-top: 12%;
+    padding-bottom: 12%;
+    height: 70%;    
+  }
+
+  #buttons{
+    position: relative;
+    bottom: 0px;
+    height: 20%;
+  }
+
+  #cityDiv{
+    height: 32%;
+    padding-top: 4%;
+  }
+
+  #citySpanDiv{
+    padding: 8px;
+    font-size: 32px;
+  }
+
+  #cityComboDiv{
+    text-align: center;
+    padding-top: 8px;
+  }
+
+  #citySelect{
+    font-size: 24px;
+  }
+
+  #vehicleDiv{
+    height: 32%;
+    margin-bottom: 4%;
+  }
+
+  #vehicleSpanDiv{
+    padding: 8px;
+    font-size: 32px;
+  }
+
+  #vehicleComboDiv{
+    text-align: center;
+    padding-top: 8px;
+  }
+
+  #vehicleSelect{
+    font-size: 24px;
+  }
+
+  #buttonDiv{
+    height: 16%;
+    text-align: center;
+  }  
+
+  .mylabel{
+    width: 100%;
+    height: auto;
+    font-size: 24px;
+  }
+
+  #packageCountDiv{
+    height: 32%;
+    display: flex;
+    padding-top: 4%;
+    margin-bottom: 4%;
+  }
+
+  #packageLeftDiv{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    float: left;
+  }
+
+  #packageLeft{
+    width: 100%;
+    font-size: 44px;
+  }
+
+  #packageTotalDiv{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+  }
+
+  #packageTotal{
+    width: 100%;
+    font-size: 44px;
+  }
+
+  #distanceDiv{
+    height: 32%;
+    display: flex;
+  }
+
+  #distanceLeftDiv{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    float: left;
+  }
+
+  #distanceLeft{
+    width: 100%;
+    font-size: 44px;
+  }
+  
+  #distanceTotalDiv{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+  }
+
+  #distanceTotal{
+    width: 100%;
+    font-size: 44px;
+  }
+  
+  #pageTitle{
+    text-align: center;
+    font-size: 24px;
+    border-bottom: solid 1px;
+    font-weight: bold;
+    padding: 2%;
+  }
+
+  select{
+    background-color: #3d3f44;
+    color: #eaeaea;
+    width: 60%;
+    text-overflow: ellipsis;
+  }
+
+  .mytext{
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    
+  }
+
+  #cargoNameDiv{
+    height: 19%;
+  }
+  #cargoLocationDiv{
+    height: 19%;
+  }
+  #cargoDistanceDiv{
+    height: 19%;
+  }
+
+  hr{
+    width: 80%;    
+  }
+}
