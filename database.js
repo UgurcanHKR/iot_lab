@@ -6,7 +6,7 @@ const { Cargo_center } = require('./api/models/cargo_center.model');
 const { Cargo_info } = require('./api/models/cargo_info.model');
 const { Cargo_status } = require('./api/models/cargo_status.model');
 const { Vehicle } = require('./api/models/vehicle.model');
-
+ 
 // This function connects to mongodb and inserted data to Cargo database
 exports.connectToDatabase = async function() {
 
